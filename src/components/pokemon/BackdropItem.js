@@ -40,7 +40,7 @@ function BackDropItem({
       (index - 1) * CARD_WIDTH,
     ];
 
-    const translateX = interpolate(scrollX.value, inputRange, [-BACKDROP_WIDTH, 0]);
+    const translateX = interpolate(scrollX.value, inputRange, [BACKDROP_WIDTH, 0]);
 
     return {
       transform: [{ translateX }],

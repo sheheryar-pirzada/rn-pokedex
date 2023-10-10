@@ -1,5 +1,5 @@
 import Animated, {
-  Easing, PinwheelIn, useAnimatedStyle, withDelay, withTiming,
+  Easing, PinwheelIn, useAnimatedStyle, withDelay, withTiming, FlipInEasyY
 } from 'react-native-reanimated';
 import { Pressable } from 'react-native';
 import { Entypo } from '@expo/vector-icons';
@@ -27,7 +27,7 @@ function TopBar({ nav, opacity }) {
       ]}
     >
       <Animated.View
-        entering={PinwheelIn.delay(3500).duration(1000).springify()}
+        entering={FlipInEasyY.delay(3500).duration(1000).springify()}
       >
         <Pressable
           onPress={() => nav.goBack()}
